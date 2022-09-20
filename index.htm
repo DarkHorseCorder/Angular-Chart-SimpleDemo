@@ -1,0 +1,23 @@
+<html ng-app="AngularChartExample">
+<head>
+    <title>Angularchart Example</title>
+</head>
+<body>
+    <div ng-view></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="chart.js"></script>
+    <script>
+        
+    </script>
+    <script>
+    angular.module('AngularChartExample',['AngularChart'], function( $routeProvider, $locationProvider ){
+        $routeProvider.when('/',{
+            template: '<chart title="Line chart example" xData="lineChartXData" yData="lineChartYData" xName="Month" yName="Hit" subtitle="This is an example"></chart>',
+            controller: MainCtrl
+            })
+    })
+    </script>
+</body>
+</html>
